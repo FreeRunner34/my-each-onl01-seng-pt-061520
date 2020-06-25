@@ -1,11 +1,8 @@
-def reverse_each_word(sentence)
-   new_sentence = []
-  sentence.split.each do |backward_words|
-    new_sentence << backward_words.reverse
+def my_each(array)
+  i = 0
+  while i < array.length
+    yield(array[i])
+    i += 1
   end
- new_sentence.join(" ")
+  array
 end
- => :reverse_each_word
-2.3.1 :046 > reverse_each_word("Hello there, and how are you?")
- => "olleH ,ereht dna woh era ?uoy"
-2.3.1 :047 > exit
